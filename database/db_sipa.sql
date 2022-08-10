@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2019 at 05:23 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.0
+-- Generation Time: Aug 10, 2022 at 05:08 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -53,12 +52,12 @@ CREATE TABLE `tb_penduduk` (
 --
 
 INSERT INTO `tb_penduduk` (`id_penduduk`, `nik`, `nama`, `tempatLahir`, `tanggalLahir`, `jenisKelamin`, `alamat`, `rt`, `rw`, `kelurahan`, `agama`, `pendidikan`, `statusPerkawinan`, `pekerjaan`, `golDarah`, `nomorTlp`, `foto`) VALUES
-(8, '3210', 'Tiya Sina', 'Subang', '2002-01-12', 'Perempuan', 'Jl.Biru No.1', '02', '04', 'Malabar', 'Islam', 'SLTA/Sederajat', 'Belum Kawin', 'Belum Bekerja', 'A', '08723456792', 'penduduk-3210.jpeg'),
-(9, '3209', 'Ei Kucing', 'Bandung', '1999-01-09', 'Laki-Laki', 'Komplek Babakan Cempaka No.12', '1', '12', 'Lingkar Selatan', 'Islam', 'Akademi/Diploma III/S.Muda', 'Belum Kawin', 'Atlet Badminton', 'A', '089234564627', 'penduduk-3209.jpeg'),
-(10, '3211', 'Nipa Oni', 'Banten', '1880-09-09', 'Laki-Laki', 'Maleer IV No.123', '6', '1', 'Turangga', 'Katolik', 'SLTA/Sederajat', 'Kawin', 'Pegawai Swasta', 'AB', '081342526788', 'penduduk-3211.jpeg'),
-(11, '3222', 'Ozi Gin', 'Bandung', '1884-05-01', 'Laki-Laki', 'Jl.Geger Juling No.12', '01', '12', 'Burangrang', 'Islam', 'SLTA/Sederajat', 'Kawin', 'Pedagang', 'B', '08978439439493', 'penduduk-32222.jpeg'),
-(12, '32888', 'Gelis Rinda', 'Surabaya', '2001-01-02', 'Perempuan', 'Komplek Bundar No.90', '12', '1', 'Lingkar Selatan', 'Protestan', 'SLTA/Sederajat', 'Belum Kawin', 'Programer', 'AB', '0891783993040', 'pendudukEdit-32888.jpeg'),
-(13, '327878', 'Umar Bakri', 'Jakarta', '1959-09-08', 'Laki-Laki', 'Jl.Madian No.101', '6', '5', 'Cikawao', 'Khonghucu', 'Strata II', 'Cerai Mati', 'PNS', 'O', '0892382839392', 'pendudukEdit-327878.jpeg');
+(14, '1111', 'Reza Ardiansyah', 'Lembar', '2000-11-02', 'Laki-Laki', 'Lembar, Lombok Barat', '02', '00', 'Lembar', 'Islam', 'Diploma IV/Strata I', 'Belum Kawin', 'Mahasiswa', 'B', '+62 853-3392-67', 'penduduk-1234.jpg'),
+(15, '2222', 'Diki ashadi', 'Mataram', '2001-08-19', 'Laki-Laki', 'Gunungsari', '04', '00', 'Mataram', 'Islam', 'Strata II', 'Belum Kawin', 'Mahasiswa', 'AB', '087861807041', 'penduduk-2222.jpg'),
+(16, '3333', 'Asep', 'Mataram', '1990-11-12', 'Laki-Laki', 'Mataram', '01', '00', 'Bumigora', 'Islam', 'SLTA/Sederajat', 'Kawin', 'Swasta', 'O', '081810907128', 'penduduk-3333.png'),
+(17, '4444', 'fitri', 'Mataram', '2002-02-12', 'Perempuan', 'Mataram', '03', '00', 'Lembar', 'Islam', 'SLTA/Sederajat', 'Belum Kawin', 'Mahasiswa', 'AB', '083129898999', 'penduduk-4444.png'),
+(18, '5555', 'syarif', 'Mataram', '1998-05-12', 'Laki-Laki', 'sandubaya', '08', '00', 'Gerung', 'Islam', 'Diploma IV/Strata I', 'Belum Kawin', 'Mahasiswa', 'B', '081291121120', 'penduduk-5555.png'),
+(19, '1212', 'asepudin', 'mataram', '1999-12-02', 'Laki-Laki', 'Mataram', '01', '02', 'Mataram', 'Islam', 'Diploma IV/Strata I', 'Belum Kawin', 'Mahasiswa', 'A', '087181212717', 'penduduk-1212.png');
 
 --
 -- Triggers `tb_penduduk`
@@ -91,18 +90,6 @@ CREATE TABLE `tb_permohonankk` (
   `status` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `tb_permohonankk`
---
-
-INSERT INTO `tb_permohonankk` (`no_permohonankk`, `nik`, `jenisPermohonan`, `tglPermohonan`, `nomor_kk`, `tgl_cetak`, `tgl_pengambilan`, `nama_pengambil`, `status`) VALUES
-('K00001', '3211', 'Pindah Datang', '2019-01-21', '32000093', '2019-03-05', '2019-07-03', 'Syakuri Ramadhan', 'Sudah Diambil'),
-('K00002', '3222', 'Pindah Datang', '2019-04-16', '-', '0000-00-00', '0000-00-00', '-', 'Belum Diambil'),
-('K00003', '3209', 'Permohonan Baru', '2014-12-01', '325555', '2015-01-01', '2015-02-01', 'Halim Sah', 'Sudah Diambil'),
-('K00004', '32888', 'Permohonan Baru', '2019-08-05', '325567778', '2019-08-07', '2019-08-08', 'huni', 'Sudah Diambil'),
-('K00005', '3211', 'Cetak Ulang', '2019-08-14', '-', '0000-00-00', '0000-00-00', '-', 'Belum Diambil'),
-('K00006', '327878', 'Pindah Datang', '2019-01-07', '-', '0000-00-00', '0000-00-00', '-', 'Belum Diambil');
-
 -- --------------------------------------------------------
 
 --
@@ -124,10 +111,9 @@ CREATE TABLE `tb_permohonanktp` (
 --
 
 INSERT INTO `tb_permohonanktp` (`no_permohonanKtp`, `nik`, `jenisPermohonan`, `tgl_penyerahanBerkas`, `tglRekam`, `tgl_pengambilan`, `status`) VALUES
-('P00003', '3210', 'Permohonan Baru', '2019-07-02', '2019-07-02', '2019-07-08', 'Sudah Diambil'),
-('P00004', '3211', 'Cetak Ulang', '2019-07-10', '2019-07-10', '2019-08-06', 'Sudah Diambil'),
-('P00005', '32888', 'Permohonan Baru', '2019-04-09', '2019-04-09', '0000-00-00', 'Belum Diambil'),
-('P00006', '32888', 'Pindah Datang', '2019-08-08', '2019-08-08', '0000-00-00', 'Belum Diambil');
+('P00001', '1234', 'Permohonan Baru', '2022-12-07', '2022-11-07', '0000-00-00', 'Belum Diambil'),
+('P00002', '2222', 'Permohonan Baru', '2022-07-24', '2022-07-24', '2022-07-25', 'Sudah Diambil'),
+('P00003', '1111', 'Permohonan Baru', '2022-07-23', '2022-07-23', '2022-07-24', 'Sudah Diambil');
 
 -- --------------------------------------------------------
 
@@ -141,14 +127,6 @@ CREATE TABLE `tb_sktmkesehatan` (
   `nomor_kk` varchar(16) NOT NULL,
   `tgl` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tb_sktmkesehatan`
---
-
-INSERT INTO `tb_sktmkesehatan` (`no_sktmkesehatan`, `nik`, `nomor_kk`, `tgl`) VALUES
-('R00001', '3211', '32044444', '2018-05-02'),
-('R00002', '32888', '3425262727', '2019-02-26');
 
 -- --------------------------------------------------------
 
@@ -164,15 +142,6 @@ CREATE TABLE `tb_sktmpendidikan` (
   `no_kk` varchar(16) NOT NULL,
   `keterangan` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tb_sktmpendidikan`
---
-
-INSERT INTO `tb_sktmpendidikan` (`no_sktmPendidikan`, `tgl_sktmPendidikan`, `nik`, `sekolah_tujuan`, `no_kk`, `keterangan`) VALUES
-('S00001', '2019-03-14', '3209', 'Universitas Padjajaran', '3200044', 'untuk mendapatkan Beasiswa masuk kuliah'),
-('S00002', '2019-01-01', '32888', 'Politeknik Negeri Bandung', '32098829', 'Meminta Keringan Biaya Semester'),
-('S00003', '2019-04-02', '3210', 'Institut Teknologi Bandung', '3200006', 'Meminta keringanan biaya semester');
 
 -- --------------------------------------------------------
 
@@ -199,8 +168,11 @@ CREATE TABLE `tb_staff` (
 --
 
 INSERT INTO `tb_staff` (`id`, `nip`, `nama`, `jenis_kelamin`, `tempat_lahir`, `tgl_lahir`, `alamat`, `jabatan`, `no_tlp`, `foto`, `password`) VALUES
-(3, '002', 'Flora Punir', 'Perempuan', 'Bandung', '1972-02-16', 'Jl.Banteng No.22 Bandung', 'Bagian Pelayanan', '08756483934', 'staffEdit-002.jpeg', '979c8e8f8271e3431249f935cd7d3f4c'),
-(7, '009', 'Hendi Ramdhan', 'Laki-Laki', 'Bandung', '1976-05-14', 'Komplek Cibiru Asri No.90 Bandung', 'Kasi Pelayanan', '0892020202', 'staff-009.jpeg', '71ea803d7025a9ef0a399e2bc9d7867e');
+(8, '123', 'setyo', 'Laki-Laki', 'Mataram', '1991-06-27', 'Mambalan', 'Camat', '081999111222333', 'staff-123.jpg', '6309647631df09e6caee8ad7c1704013'),
+(9, '234', 'safira', 'Perempuan', 'Gunungsari', '1995-11-12', 'Ranjok selatan', 'Bagian Pelayanan', '082111222999', 'staff-234.png', 'ea9827e9ad232af00af77b2375693568'),
+(10, '345', 'zaskia', 'Perempuan', 'Cakra', '1992-12-11', 'cakra', 'Kasi Pelayanan', '083129898932', 'staff-345.png', 'b9cfa62452f1d3fded178fc61244f6e8'),
+(11, '456', 'Baharudin', 'Laki-Laki', 'Suranadi', '1994-02-02', 'Kuripan', 'Bagian Pelayanan', '081221919202', 'staff-456.png', '4a888b5a6e49fc2e5ec70ed2b73e0b82'),
+(12, '1112', 'sarif', 'Laki-Laki', 'Mataram', '1997-11-11', 'Mataram', 'Bagian Pelayanan', '0871221112228', 'staff-1112.png', 'e0c4b80d331b60b40474869cc2153d85');
 
 -- --------------------------------------------------------
 
@@ -219,7 +191,7 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`userID`, `nama`, `password`) VALUES
-('admin', 'Wisnu', '21232f297a57a5a743894a0e4a801fc3');
+('admin', 'admin', '21232f297a57a5a743894a0e4a801fc3');
 
 --
 -- Indexes for dumped tables
@@ -275,13 +247,13 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_penduduk`
 --
 ALTER TABLE `tb_penduduk`
-  MODIFY `id_penduduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_penduduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `tb_staff`
 --
 ALTER TABLE `tb_staff`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
